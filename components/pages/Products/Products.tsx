@@ -24,7 +24,7 @@ export default function ProductGrid() {
   const isInView6 = useInView(ref6, { once: false, amount: 0.1 });
 
   return (
-    <div className="px-4 py-8 flex flex-col gap-4" id="products">
+    <div className="px-4 py-8 flex flex-col gap-4 min-[1920px]:px-[200px] min-[2400px]:px-[400px]  min-[3000px]:px-[700px]" id="products">
       <h1 className="text-3xl font-bold mb-8 text-center">Our Products</h1>
       <div className="flex gap-4">
         <div className="flex flex-col gap-4">

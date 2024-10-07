@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Certificate() {
   return (
-    <div className='w-full h-[40vh] bg-black text-white flex justify-between items-center px-[270px] py-[120px]'>
+    <div className='w-full h-[40vh] bg-black text-white flex justify-between items-center px-[270px] py-[120px] min-[1920px]:px-[200px] min-[2400px]:px-[400px]  min-[3000px]:px-[700px]'>
         <div>
             <h1 className='font-bold text-[38px]'>Certificate</h1>
         </div>

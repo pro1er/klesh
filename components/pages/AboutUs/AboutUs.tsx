@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutUs() {
   return (
-    <div className="h-[60vh] w-full bg-gray-200 flex p-14" id="about">
+    <div className="h-[60vh] w-full bg-gray-200 flex p-14 min-[1920px]:px-[200px] min-[2400px]:px-[400px]  min-[3000px]:px-[700px]" id="about">
       <div className="bg-white px-[212px] flex justify-center flex-col gap-8 w-2/3">
         <h1 className=" text-[56px] font-bold">About us</h1>
         <p className="text-[18px] leading-10">

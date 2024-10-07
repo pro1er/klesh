@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Features() {
   return (
-    <div className="min-h-screen bg-white p-12" id="features">
+    <div className="min-h-screen bg-white p-12 min-[1920px]:px-[200px] min-[2400px]:px-[400px]  min-[3000px]:px-[700px]" id="features">
       <div className="px-[222px] gap-8 flex flex-col">
         <h1 className="font-bold text-[60px] ">Product features</h1>
         <p>

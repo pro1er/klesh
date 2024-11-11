@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.115.0",
+    "@react-three/fiber": "^8.17.10",
     "framer-motion": "^11.11.1",
     "next": "14.2.14",
     "react": "^18",
     "react-dom": "^18",
-    "react-multi-carousel": "^2.8.5"
+    "react-multi-carousel": "^2.8.5",
+    "three": "^0.170.0"
   },
   "devDependencies": {
     "@types/node": "^20",

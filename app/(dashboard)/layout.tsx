@@ -1,7 +1,6 @@
 // app/dashboard/layout.tsx
 import { ReactNode } from 'react';
 import type { Metadata } from "next";
-import Header from "@/components/layout/header";
 
 export const metadata: Metadata = {
     title: "Home | My Site",
@@ -10,8 +9,7 @@ export const metadata: Metadata = {
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="overflow-hidden">
-      <Header />
+    <div className="overflow-hidden bg-back">
       <div className="flex">
         {/* <Suspense fallback={<Loading />}> */}
           <div className="w-full ">

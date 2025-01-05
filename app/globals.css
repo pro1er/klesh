@@ -24,14 +24,13 @@ body {
   scroll-behavior: smooth;
 }
 @font-face {
-  font-family: 'Lulo Clean W01 One Bold';
-  src: url("/fonts/FontsFree-Net-Lulo-Clean-W01-One-Bold.ttf") format("truetype");
+  font-family:monBlack;
+  src: url("/font/Montserrat-Black.ttf") format("truetype");
 }
 @font-face {
-  font-family: 'Caveat Bold';
-  src: url("/fonts/Caveat-Bold.ttf") format("truetype");
+  font-family:monRegular;
+  src: url("/font/Montserrat-Regular.ttf") format("truetype");
 }
-
 
 @layer base {
   :root {

@@ -5,7 +5,7 @@ import ThreeCanvas from "@/components/support/ThreeCanvas copy 2";
 const ThreeD2 = () => {
   return (
     <div className="bg-back min-h-screen flex items-center justify-center w-full px-44">
-      <div className="flex flex-col md:flex-row items-center gap-40 max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row items-center xl:gap-40 max-w-7xl mx-auto 2xl:gap-60">
         {/* Left Section - Product Image */}
         <div className="h-screen w-[400px] relative">
           <ThreeCanvas />
@@ -18,24 +18,24 @@ const ThreeD2 = () => {
         {/* Right Section - Content */}
         <div className="text-left flex-1 flex flex-col gap-8 w-2/3">
           <div className="flex justify-between">
-            <h1 className="text-[68px] leading-none font-monBlack text-big">
+            <h1 className="2xl:text-[80px] xl:text-[68px] leading-none font-monBlack text-big">
               DISH <br />
               <span className="font-monBlack">WASHING</span> <br />
-              <span className="text-[32px] text-mid leading-none font-monBlack block">
+              <span className="2xl:text-[40px] xl:text-[32px] text-mid leading-none font-monBlack block">
                 LIQUID
               </span>
             </h1>
-            <p className="text-big font-monBlack text-right text-[16px] ml-4">
+            <p className="text-big font-monBlack text-right 2xl:text-[20px] xl:text-[16px] ml-4">
               750ml
             </p>
           </div>
-          <p className="text-[16px] mt-6 text-small leading-tight text-justify">
+          <p className="2xl:text-[20px] xl:text-[16px] mt-6 text-small leading-tight text-justify">
             Манай хамгийн сүүлийн үеийн аяга таваг угаагч шингэнийг Герман
             технологийн хүчийг мэдрээрэй. Таны гарт ээлтэй зөөлөн байхын
-            зэрэгцээ хамгийн хатуу тослог, бохирдлыг арилгахаар бүтээсэн. Манай
-            хамгийн сүүлийн үеийн аяга таваг угаагч шингэнийг Герман технологийн
-            хүчийг мэдрээрэй. Таны гарт ээлтэй зөөлөн байхын зэрэгцээ хамгийн
-            хатуу тослог, бохирдлыг арилгахаар бүтээсэн.
+            зэрэгцээ хамгийн хатуу тослог, бохирдлыг арилгах хамгийн сүүлийн
+            үеийн томьёогоор бүтээсэн. Таны гарт ээлтэй зөөлөн байхын зэрэгцээ
+            хамгийн хатуу тослог, бохирдлыг арилгах хамгийн сүүлийн үеийн
+            томьёогоор бүтээсэн.
           </p>
 
           {/* Features Section */}

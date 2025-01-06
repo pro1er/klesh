@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function CertificateHero() {
   return (
-    <div className='bg-back w-full h-[50vh] flex items-center px-44 justify-between'>
+    <div className='bg-back w-full h-[50vh] flex items-center px-44 justify-between 2xl:gap-20 xl:gap-16'>
         <Certificate name="mnas logo.jpg"/>
         <Certificate name="icc logo.png"/>
         <Certificate name="ilac-mra-seeklogo.png"/>

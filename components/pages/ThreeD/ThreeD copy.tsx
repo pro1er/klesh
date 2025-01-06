@@ -5,7 +5,7 @@ import ThreeCanvas from "@/components/support/ThreeCanvas copy";
 const ThreeD1 = () => {
   return (
     <div className="bg-back min-h-screen flex items-center justify-center w-full px-44">
-      <div className="flex flex-col md:flex-row items-center gap-40 max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row items-center xl:gap-40 max-w-7xl mx-auto 2xl:gap-60">
         {/* Left Section - Product Image */}
         <div className="h-screen w-[400px] relative">
           <ThreeCanvas />
@@ -29,18 +29,16 @@ const ThreeD1 = () => {
               750ml
             </p>
           </div>
-          <p className="text-[16px] mt-6 text-small leading-tight text-justify">
+          <p className="2xl:text-[20px] xl:text-[16px] mt-6 text-small leading-tight text-justify">
             Манай хамгийн сүүлийн үеийн аяга таваг угаагч шингэнийг Герман
             технологийн хүчийг мэдрээрэй. Таны гарт ээлтэй зөөлөн байхын
-            зэрэгцээ хамгийн хатуу тослог, бохирдлыг арилгахаар бүтээсэн. Манай
-            хамгийн сүүлийн үеийн аяга таваг угаагч шингэнийг Герман технологийн
-            хүчийг мэдрээрэй. Таны гарт ээлтэй зөөлөн байхын зэрэгцээ хамгийн
-            хатуу тослог, бохирдлыг арилгахаар бүтээсэн.
+            зэрэгцээ хамгийн хатуу тослог, бохирдлыг арилгах хамгийн сүүлийн үеийн томьёогоор бүтээсэн. Таны гарт ээлтэй зөөлөн байхын зэрэгцээ хамгийн
+            хатуу тослог, бохирдлыг арилгах хамгийн сүүлийн үеийн томьёогоор бүтээсэн.
           </p>
 
           {/* Features Section */}
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center">
               <div className="text-blue-900 text-2xl">✨</div>
               <p className="text-[16px] text-small text-center">
                 Толбо арилгагч найрлага

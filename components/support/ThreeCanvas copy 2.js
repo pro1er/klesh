@@ -5,7 +5,7 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 export default function ThreeCanvas() {
   return (
     <Canvas
-      camera={{ position: [-40, -6, 5], fov: 16 }}
+      camera={{ position: [-40, -6, 5], fov: 16}}
       style={{ width: '100%', height: '100%' }}
     >
       <ambientLight intensity={1} /> {/* Brighter ambient light */}
@@ -32,7 +32,7 @@ function Model() {
   // Center the model in the scene
   useEffect(() => {
     if (modelRef.current) {
-      modelRef.current.position.set(0, 0, 0); // Ensures the model is centered
+      modelRef.current.position.set(0, -1.5, 0); // Ensures the model is centered
     }
   }, []);
 

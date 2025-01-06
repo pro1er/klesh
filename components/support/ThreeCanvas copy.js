@@ -31,7 +31,7 @@ function Model() {
   // Center the model in the scene
   useEffect(() => {
     if (modelRef.current) {
-      modelRef.current.position.set(0, 0, 0); // Ensures the model is centered
+      modelRef.current.position.set(0, -1, 0); // Ensures the model is centered
     }
   }, []);
 

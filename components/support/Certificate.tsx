@@ -11,8 +11,8 @@ export default function Certificate({ name }: CertificateProps) {
         <Image
           src={`/certificate/${name}`}
           alt={`${name} Certificate`}
-          layout="fill"
-          objectFit="cover" 
+          fill
+          style={{ objectFit: "cover" }} 
         />
       </div>
       <p className="2xl:text-[20px] xl:text-[14px] text-small font-monRegular">

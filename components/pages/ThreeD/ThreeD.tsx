@@ -1,36 +1,51 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import ThreeCanvas from "@/components/support/ThreeCanvas";
 import { TextureLoader, Texture } from "three";
 
 const ThreeD: React.FC = () => {
   const [labelTexture, setLabelTexture] = useState<Texture | null>(null);
-  const [activeTexture, setActiveTexture] = useState<string>("yellow"); // Track the active texture
+  const [activeTexture, setActiveTexture] = useState<string>("yellow");
 
-  // Load textures for the labels
-  const labelTextures: { [key: string]: Texture } = {
-    yellow: new TextureLoader().load("/label/label.jpeg", (texture) => {
-      texture.flipY = false; // Fix the upside-down texture
-    }),
-    green: new TextureLoader().load("/label/label.jpeg", (texture) => {
-      texture.flipY = false; // Fix the upside-down texture
-    }),
-  };
-
-  // Set the first button (red) as active on load
+  // Load textures in useEffect to ensure it only runs on the client
   useEffect(() => {
+    const labelTextures: { [key: string]: Texture } = {
+      yellow: new TextureLoader().load("/label/label2.png", (texture) => {
+        texture.flipY = false; // Fix the upside-down texture
+      }),
+      green: new TextureLoader().load("/label/label.jpeg", (texture) => {
+        texture.flipY = false; // Fix the upside-down texture
+      }),
+    };
+
+    // Set the initial texture on load
     setLabelTexture(labelTextures.yellow);
-    setActiveTexture("yellow");
+
+    // Cleanup function if needed
+    return () => {
+      // Cleanup if needed when the component is unmounted
+    };
   }, []);
 
+  // Move handleSetTexture outside of useEffect so it is accessible to the JSX
   const handleSetTexture = (textureKey: string) => {
-    setLabelTexture(labelTextures[textureKey]);
+    const labelTextures: { [key: string]: string } = {
+      yellow: "/label/label2.png",
+      green: "/label/label.jpeg",
+    };
+
+    const newTexture = new TextureLoader().load(labelTextures[textureKey], (texture) => {
+      texture.flipY = false; // Fix the upside-down texture whenever a new texture is loaded
+    });
+
+    setLabelTexture(newTexture);
     setActiveTexture(textureKey);
   };
 
   return (
     <div className="bg-back min-h-screen flex items-center justify-center w-full px-44">
-      <div className="flex flex-col md:flex-row items-center xl:gap-40  2xl:gap-60">
+      <div className="flex flex-col md:flex-row items-center xl:gap-40 2xl:gap-60">
         {/* Left Section - 3D Model */}
         <div className="h-screen 2xl:w-[540px] xl:w-[400px] relative">
           <ThreeCanvas labelTexture={labelTexture} />

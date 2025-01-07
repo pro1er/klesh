@@ -25,14 +25,14 @@ export default function HomeHero() {
           width={1620}
           height={2160}
           alt=""
-          className="xl:hidden" // Image will be hidden on screens larger than md
+          className="md:hidden" // Image will be hidden on screens larger than md
           />
           <Image
           src="/Background image.jpg"
           width={1920}
           height={1080}
           alt=""
-          className="hidden xl:flex" // Image will be hidden on screens larger than md
+          className="hidden md:flex" // Image will be hidden on screens larger than md
           />
         <div className="absolute flex flex-col  xl:ml-44  gap-8 top-52 xl:top-auto w-full xl:w-auto xl:items-start ">
           <h1 className="2xl:text-[100px] xl:text-[80px] lg:text-[60px] text-[40px] text-big font-monBlack leading-[1.2] text-center xl:text-left">

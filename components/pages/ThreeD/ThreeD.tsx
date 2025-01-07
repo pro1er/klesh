@@ -7,14 +7,16 @@ import { TextureLoader, Texture } from "three";
 const ThreeD: React.FC = () => {
   const [labelTexture, setLabelTexture] = useState<Texture | null>(null);
   const [activeTexture, setActiveTexture] = useState<string>("yellow");
+  const [bottleColor] = useState<string>("#FFC107");
+  const [is3DEnabled, setIs3DEnabled] = useState<boolean>(false);
 
   // Load textures in useEffect to ensure it only runs on the client
   useEffect(() => {
     const labelTextures: { [key: string]: Texture } = {
-      yellow: new TextureLoader().load("/label/label2.png", (texture) => {
+      yellow: new TextureLoader().load("/label/2.png", (texture) => {
         texture.flipY = false; // Fix the upside-down texture
       }),
-      green: new TextureLoader().load("/label/label.jpeg", (texture) => {
+      green: new TextureLoader().load("/label/1.png", (texture) => {
         texture.flipY = false; // Fix the upside-down texture
       }),
     };
@@ -31,8 +33,8 @@ const ThreeD: React.FC = () => {
   // Move handleSetTexture outside of useEffect so it is accessible to the JSX
   const handleSetTexture = (textureKey: string) => {
     const labelTextures: { [key: string]: string } = {
-      yellow: "/label/label2.png",
-      green: "/label/label.jpeg",
+      yellow: "/label/2.png",
+      green: "/label/1.png",
     };
 
     const newTexture = new TextureLoader().load(
@@ -51,10 +53,16 @@ const ThreeD: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center xl:gap-40 max-w-7xl mx-auto 2xl:gap-60">
         {/* Left Section - Product Image */}
         <div className="xl:h-screen 2xl:w-[540px] xl:w-[400px] h-[600px] relative">
-          <ThreeCanvas labelTexture={labelTexture} />
-          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-6">
+          {/* Overlay div for disabling interaction */}
+          {!is3DEnabled && (
+            <div className="absolute inset-0   z-10"></div>
+          )}
+
+          <ThreeCanvas labelTexture={labelTexture} bottleColor={bottleColor} />
+
+          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-6 z-30">
             <button
-              className={`w-6 h-6 bg-yellow-500 text-white rounded-full ${
+              className={`w-6 h-6 bg-yellow-500 text-white rounded-full  ${
                 activeTexture === "yellow"
                   ? "ring-8 ring-yellow-500 outline outline-4 outline-offset-1 outline-back"
                   : ""
@@ -62,7 +70,7 @@ const ThreeD: React.FC = () => {
               onClick={() => handleSetTexture("yellow")}
             ></button>
             <button
-              className={`w-6 h-6 bg-green-500 text-white rounded-full ${
+              className={`w-6 h-6 bg-green-500 text-white rounded-full  ${
                 activeTexture === "green"
                   ? "ring-8 ring-green-500 outline outline-4 outline-offset-1 outline-back"
                   : ""
@@ -70,6 +78,16 @@ const ThreeD: React.FC = () => {
               onClick={() => handleSetTexture("green")}
             ></button>
           </div>
+
+          {/* 3D Toggle Button */}
+          <button
+            className={`z-20 absolute top-4 right-4 px-4 py-2 rounded-full text-white font-bold ${
+              is3DEnabled ? "bg-blue-500" : "bg-red-500"
+            }`}
+            onClick={() => setIs3DEnabled(!is3DEnabled)}
+          >
+            {is3DEnabled ? "3D" : "3D ✖"}
+          </button>
         </div>
 
         {/* Right Section - Content */}

@@ -10,7 +10,7 @@ export default function ThreeCanvas() {
     >
       <ambientLight intensity={1} /> {/* Brighter ambient light */}
       <directionalLight position={[5, 5, 5]} intensity={1} /> {/* Main light source */}
-      <directionalLight position={[-5, -5, 5]} intensity={0.5} /> {/* Secondary light for fill */}
+      <directionalLight position={[-5, -5, 5]} intensity={1} /> {/* Secondary light for fill */}
       <spotLight position={[0, 5, 10]} intensity={1} angle={0.3} penumbra={1} castShadow /> {/* Spotlight for more defined shadows */}
       <Model />
       <OrbitControls 

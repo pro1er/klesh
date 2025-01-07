@@ -5,11 +5,11 @@ export default function ContactHero() {
     <div className="flex flex-col justify-between bg-gray-100">
       {/* Content Section */}
       <div className="flex flex-col items-center justify-center py-40 px-4 sm:px-6 lg:px-8">
-        <div className="flex w-full max-w-6xl justify-between">
+        <div className="flex flex-col xl:flex-row  w-full max-w-6xl xl:justify-between gap-20">
           {/* Follow Us */}
           <div className="text-center">
             <h2 className="text-2xl font-monBlack text-big">FOLLOW US</h2>
-            <div className="mt-4 flex flex-row gap-4">
+            <div className="mt-4 flex xl:flex-row gap-4 flex-col  items-center">
               <a
                 href="https://www.instagram.com/kleshmongolia"
                 className="bg-gradient-to-r from-red-500 to-purple-500 text-white  rounded-full flex items-center justify-center  gap-4 px-2 w-[200px] relative py-2"
@@ -80,9 +80,9 @@ export default function ContactHero() {
       </div>
 
       {/* Footer Section */}
-      <footer className="bg-big text-white py-4 flex justify-center items-center">
+      <footer className="bg-big text-white py-4 flex justify-center items-center flex-col gap-4">
         <Image src="/logo.png" width={80} height={80} alt="" />
-        <div className="text-center absolute right-8 text-[12px] font-monBlack">
+        <div className="text-center xl:absolute right-8 text-[12px] font-monBlack">
           <p>© 2025 by Klesh. All rights reserved. Developed by Orgil O</p>
         </div>
       </footer>

@@ -35,30 +35,37 @@ const ThreeD: React.FC = () => {
       green: "/label/label.jpeg",
     };
 
-    const newTexture = new TextureLoader().load(labelTextures[textureKey], (texture) => {
-      texture.flipY = false; // Fix the upside-down texture whenever a new texture is loaded
-    });
+    const newTexture = new TextureLoader().load(
+      labelTextures[textureKey],
+      (texture) => {
+        texture.flipY = false; // Fix the upside-down texture whenever a new texture is loaded
+      }
+    );
 
     setLabelTexture(newTexture);
     setActiveTexture(textureKey);
   };
 
   return (
-    <div className="bg-back min-h-screen flex items-center justify-center w-full px-44">
-      <div className="flex flex-col md:flex-row items-center xl:gap-40 2xl:gap-60">
-        {/* Left Section - 3D Model */}
-        <div className="h-screen 2xl:w-[540px] xl:w-[400px] relative">
+    <div className="bg-back min-h-screen flex items-center justify-center w-full xl:px-44 px-8">
+      <div className="flex flex-col md:flex-row items-center xl:gap-40 max-w-7xl mx-auto 2xl:gap-60">
+        {/* Left Section - Product Image */}
+        <div className="xl:h-screen 2xl:w-[540px] xl:w-[400px] h-[600px] relative">
           <ThreeCanvas labelTexture={labelTexture} />
           <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-6">
             <button
               className={`w-6 h-6 bg-yellow-500 text-white rounded-full ${
-                activeTexture === "yellow" ? "ring-8 ring-yellow-500 outline outline-4 outline-offset-1 outline-back" : ""
+                activeTexture === "yellow"
+                  ? "ring-8 ring-yellow-500 outline outline-4 outline-offset-1 outline-back"
+                  : ""
               }`}
               onClick={() => handleSetTexture("yellow")}
             ></button>
             <button
               className={`w-6 h-6 bg-green-500 text-white rounded-full ${
-                activeTexture === "green" ? "ring-8 ring-green-500 outline outline-4 outline-offset-1 outline-back" : ""
+                activeTexture === "green"
+                  ? "ring-8 ring-green-500 outline outline-4 outline-offset-1 outline-back"
+                  : ""
               }`}
               onClick={() => handleSetTexture("green")}
             ></button>
@@ -66,16 +73,18 @@ const ThreeD: React.FC = () => {
         </div>
 
         {/* Right Section - Content */}
-        <div className="text-left flex-1 flex flex-col gap-8">
-          <div className="flex justify-between">
-            <h1 className="text-[68px] leading-none font-monBlack text-big">
-              DISH <br />
-              <span className="font-monBlack">WASHING</span> <br />
-              <span className="text-[32px] text-mid leading-none font-monBlack block">
+        <div className="text-left flex-1 flex flex-col gap-8 xl:w-2/3 w-full">
+          <div className="flex flex-row justify-between">
+            <h1 className="2xl:text-[80px] xl:text-[68px] text-[40px] leading-none font-monBlack text-big">
+              DISH<br />
+              <span className="2xl:text-[80px] xl:text-[68px] text-[40px] leading-none font-monBlack text-big">
+                WASHING
+              </span>
+              <span className="2xl:text-[40px] xl:text-[32px] text-[28px] text-mid leading-none font-monBlack block">
                 LIQUID
               </span>
             </h1>
-            <p className="text-big font-monBlack text-right text-[16px] ml-4">
+            <p className="text-big font-monBlack xl:text-right 2xl:text-[20px] xl:text-[16px] xl:ml-4 mt-4">
               750ml
             </p>
           </div>
@@ -91,26 +100,26 @@ const ThreeD: React.FC = () => {
           {/* Features Section */}
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div className="flex flex-col items-center">
-              <div className="text-blue-900 xl:text-2xl 2xl:text-3xl">✨</div>
-              <p className="2xl:text-[20px] xl:text-[16px]] text-small text-center">
+              <div className="text-blue-900 text-2xl">✨</div>
+              <p className="text-[16px] text-small text-center">
                 Толбо арилгагч найрлага
               </p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="text-blue-900 xl:text-2xl 2xl:text-3xl">✨</div>
-              <p className="2xl:text-[20px] xl:text-[16px]] text-small text-center">
+              <div className="text-blue-900 text-2xl">✨</div>
+              <p className="text-[16px] text-small text-center">
                 Толбо арилгагч найрлага
               </p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="text-blue-900 xl:text-2xl 2xl:text-3xl">✨</div>
-              <p className="2xl:text-[20px] xl:text-[16px]] text-small text-center">
+              <div className="text-blue-900 text-2xl">✨</div>
+              <p className="text-[16px] text-small text-center">
                 Толбо арилгагч найрлага
               </p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="text-blue-900 xl:text-2xl 2xl:text-3xl">✨</div>
-              <p className="2xl:text-[20px] xl:text-[16px]] text-small text-center">
+              <div className="text-blue-900 text-2xl">✨</div>
+              <p className="text-[16px] text-small text-center">
                 Толбо арилгагч найрлага
               </p>
             </div>

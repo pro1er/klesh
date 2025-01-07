@@ -1,7 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import Image from "next/image";
-
+import Image from "@/node_modules/next/image";
 export default function ProductHero() {
   return (
     <div className="w-full h-screen ">

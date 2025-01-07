@@ -15,10 +15,6 @@ export default function page() {
         <ProductHero/>
         <ContactHero/>
       </div>
-      <div className="md:hidden flex justify-center items-center h-screen w-full flex-col">
-          <h1 className=" font-bold">USE DESKTOP</h1>
-          <p>Under Development</p>
-      </div>
     </div>
   );
 }

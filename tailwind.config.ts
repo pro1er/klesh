@@ -10,9 +10,9 @@ const config: Config = {
   theme: {
   	extend: {
 		animation: {
-			"fade-up": "fadeUp 1s ease-in-out",
-			"fadeLeft": 'fadeLeft 1s ease-in-out',
-        	"fadeRight": 'fadeRight 1s ease-in-out',
+			"fade-up": "fadeUp 2.5s ease-in-out forwards",
+			"fadeLeft": 'fadeLeft 2.5s ease-in-out',
+        	"fadeRight": 'fadeRight 2.5s ease-in-out',
 		  },
 		  keyframes: {
 			fadeUp: {

@@ -22,12 +22,12 @@ export default function HomeHero() {
           width={320}
           height={320}
           alt="Logo"
-          className="w-[100px] xl:w-[140px] animate-fadeLeft"
+          className="w-[100px] xl:w-[140px] animate-fadeLeft delay-400"
           priority // Ensures logo image loads faster
         />
         <a
           href="#contact"
-          className="font-monBlack text-white bg-big rounded-full px-6 py-2 text-xs sm:text-sm md:text-base animate-fadeRight delay-200"
+          className="font-monBlack text-white bg-big rounded-full px-6 py-2 text-xs sm:text-sm md:text-base animate-fadeRight delay-400"
         >
           Contacts
         </a>

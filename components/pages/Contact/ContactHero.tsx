@@ -2,7 +2,7 @@ import React from "react";
 import Image from "@/node_modules/next/image";
 export default function ContactHero() {
   return (
-    <div className="flex flex-col justify-between bg-gray-100">
+    <div className="flex flex-col justify-between bg-gray-100" id="contact">
       {/* Content Section */}
       <div className="flex flex-col items-center justify-center py-40 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col xl:flex-row  w-full max-w-6xl xl:justify-between gap-20">
@@ -34,7 +34,7 @@ export default function ContactHero() {
                 <span className="font-semibold text-[16px]">Kleshmongolia</span>
               </a>
               <a
-                href="https://www.facebook.com/klesh"
+                href="https://www.facebook.com/profile.php?id=61560365275473"
                 className="bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-full flex items-center justify-center gap-4 px-2 w-[200px] relative py-2"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -9,10 +9,6 @@ const ThreeD2 = () => {
         {/* Left Section - Product Image */}
         <div className="xl:h-screen 2xl:w-[540px] xl:w-[400px] h-[600px] relative">
           <ThreeCanvas />
-          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-2">
-            <div className="w-4 h-4 rounded-full bg-green-500"></div>
-            <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
-          </div>
         </div>
 
         {/* Right Section - Content */}

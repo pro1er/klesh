@@ -5,7 +5,7 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 export default function ThreeCanvas({ labelTexture, bottleColor }) {
   return (
     <Canvas
-      camera={{ position: [-40, -8, 5], fov: 10 }}
+      camera={{ position: [-40, -2, 5], fov: 10 }}
       style={{ width: '100%', height: '100%' }}
     >
       <ambientLight intensity={1} /> {/* Brighter ambient light */}

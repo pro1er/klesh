@@ -1,17 +1,79 @@
 "use client";
-import React from "react";
-import ThreeCanvas from "@/components/support/ThreeCanvas copy";
 
-const ThreeD2 = () => {
+import React, { useState, useEffect } from "react";
+import ThreeCanvas from "@/components/support/ThreeCanvas copy";
+import { TextureLoader, Texture } from "three";
+
+const ThreeD2: React.FC = () => {
+  const [labelTexture, setLabelTexture] = useState<Texture | null>(null);
+  const [activeTexture, setActiveTexture] = useState<string>("rainbow");
+  const [is3DEnabled, setIs3DEnabled] = useState<boolean>(false);
+
+  // Load textures in useEffect to ensure it only runs on the client
+  useEffect(() => {
+    const labelTextures: { [key: string]: Texture } = {
+      rainbow: new TextureLoader().load("/label/3.png", (texture) => {
+        texture.flipY = false; // Fix the upside-down texture
+      }),
+      gray: new TextureLoader().load("/label/4.png", (texture) => {
+        texture.flipY = false; // Fix the upside-down texture
+      }),
+    };
+
+    // Set the initial texture on load
+    setLabelTexture(labelTextures.rainbow);
+
+    return () => {
+      // Cleanup if needed when the component is unmounted
+    };
+  }, []);
+
+  // Move handleSetTexture outside of useEffect so it is accessible to the JSX
+  const handleSetTexture = (textureKey: string) => {
+    const labelTextures: { [key: string]: string } = {
+      rainbow: "/label/3.png",
+      gray: "/label/4.png",
+    };
+
+    const newTexture = new TextureLoader().load(
+      labelTextures[textureKey],
+      (texture) => {
+        texture.flipY = false; // Fix the upside-down texture whenever a new texture is loaded
+      }
+    );
+
+    setLabelTexture(newTexture);
+    setActiveTexture(textureKey);
+  };
+
   return (
     <div className="bg-back min-h-screen flex items-center justify-center w-full xl:px-44 px-8">
       <div className="flex flex-col md:flex-row items-center xl:gap-40 max-w-7xl mx-auto 2xl:gap-60">
         {/* Left Section - Product Image */}
         <div className="xl:h-screen 2xl:w-[540px] xl:w-[400px] h-[600px] relative">
-          <ThreeCanvas />
-          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-2">
-            <div className="w-4 h-4 rounded-full bg-green-500"></div>
-            <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
+          <ThreeCanvas labelTexture={labelTexture} />
+          
+          {/* Label Change Buttons */}
+          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-6 z-30">
+            <button
+              className={`w-6 h-6 rounded-full ${
+                activeTexture === "rainbow"
+                  ? "ring-8 ring-gradient  from-blue-500 via-purple-500 to-pink-500 outline outline-4 outline-offset-1 outline-back"
+                  : ""
+              }`}
+              style={{
+                background: "linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)",
+              }}
+              onClick={() => handleSetTexture("rainbow")}
+            ></button>
+            <button
+              className={`w-6 h-6 bg-gray-300 text-white rounded-full ${
+                activeTexture === "gray"
+                  ? "ring-8 ring-gray-300 outline outline-4 outline-offset-1 outline-back"
+                  : ""
+              }`}
+              onClick={() => handleSetTexture("gray")}
+            ></button>
           </div>
         </div>
 

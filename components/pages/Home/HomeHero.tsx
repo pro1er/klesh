@@ -38,11 +38,11 @@ export default function HomeHero() {
           <h1 className="2xl:text-[100px] xl:text-[80px] lg:text-[60px] text-[40px] text-big font-monBlack leading-[1.2] text-center xl:text-left">
             Household <br /> Cleaning <br /> Products
           </h1>
-          <p className="2xl:text-[20px] xl:text-[16px] lg:text-[12px] text-[10px]  text-small font-monRegular hidden xl:block">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br />
-            sed do eiusmod tempor incididunt ut labore et dolore <br />
-            magna aliqua. Ut enim ad minim veniam, quis nostrud <br />
-            exercitation ullamco laboris nisi ut aliquip ex ea <br />
+          <p className="2xl:text-[20px] xl:text-[16px] lg:text-[12px] text-[10px] w-[440px]  text-small font-monRegular hidden xl:block text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea
             commodo consequa
           </p>
         </div>

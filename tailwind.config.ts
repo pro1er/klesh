@@ -9,6 +9,43 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		animation: {
+			"fade-up": "fadeUp 1s ease-in-out",
+			"fadeLeft": 'fadeLeft 1s ease-in-out',
+        	"fadeRight": 'fadeRight 1s ease-in-out',
+		  },
+		  keyframes: {
+			fadeUp: {
+			  "0%": {
+				opacity: '0',
+				transform: "translateY(40px)",
+			  },
+			  "100%": {
+				opacity: '1',
+				transform: "translateY(0)",
+			  },
+			},
+			fadeLeft: {
+				'0%': {
+				  opacity: '0',
+				  transform: 'translateX(-40px)',
+				},
+				'100%': {
+				  opacity: '1',
+				  transform: 'translateX(0)',
+				},
+			  },
+			  fadeRight: {
+				'0%': {
+				  opacity: '0',
+				  transform: 'translateX(40px)',
+				},
+				'100%': {
+				  opacity: '1',
+				  transform: 'translateX(0)',
+				},
+			}
+		},
   		colors: {
   			big: '#00007A',
   			mid: '#FFC300',

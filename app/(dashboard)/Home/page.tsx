@@ -13,6 +13,7 @@ export default function page() {
         <CertificateHero/>
         <ThreeDHero/>
         <ProductHero/>
+        {/* <ProductGrid/> */}
         <ContactHero/>
       </div>
     </div>

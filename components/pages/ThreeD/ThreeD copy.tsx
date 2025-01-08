@@ -7,7 +7,6 @@ import { TextureLoader, Texture } from "three";
 const ThreeD2: React.FC = () => {
   const [labelTexture, setLabelTexture] = useState<Texture | null>(null);
   const [activeTexture, setActiveTexture] = useState<string>("rainbow");
-  const [is3DEnabled, setIs3DEnabled] = useState<boolean>(false);
 
   // Load textures in useEffect to ensure it only runs on the client
   useEffect(() => {

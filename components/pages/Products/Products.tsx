@@ -2,9 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
-import Slider from "@/components/support/Slider";
-
+import Image from "@/node_modules/next/image";
 export default function ProductGrid() {
   // Refs for each product
   const ref1 = useRef(null);
@@ -25,7 +23,6 @@ export default function ProductGrid() {
 
   return (
     <div className="px-4 py-8 flex flex-col gap-4 min-[1920px]:px-[200px] min-[2400px]:px-[400px]  min-[3000px]:px-[700px]" id="products">
-      <h1 className="text-3xl font-bold mb-8 text-center">Our Products</h1>
       <div className="flex gap-4">
         <div className="flex flex-col gap-4">
           <div className="">
@@ -101,7 +98,6 @@ export default function ProductGrid() {
         transition={{ duration: 0.5 }}
         className="bg-white shadow-md overflow-hidden"
       >
-        <Slider />
       </motion.div>
     </div>
   );

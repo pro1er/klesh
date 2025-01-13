@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import ThreeCanvas from "@/components/support/ThreeCanvas";
-import { TextureLoader, Texture, Color } from "three";
+import { TextureLoader, Texture } from "three";
 import { useTranslations } from "next-intl";
 import Image from "@/node_modules/next/image";
 const ThreeD: React.FC = () => {

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "@/node_modules/next/image";
-
+import LocaleSwitcher from "@/components/ui/LocaleSwitcher";
 export default function HomeHero() {
   useEffect(() => {
     // Check if there is a hash in the URL
@@ -25,12 +25,15 @@ export default function HomeHero() {
           className="w-[100px] xl:w-[140px] animate-fadeLeft delay-1000"
           priority // Ensures logo image loads faster
         />
-        <a
-          href="#contact"
-          className="font-monBlack text-white bg-big rounded-full px-6 py-2 text-xs sm:text-sm md:text-base animate-fadeRight delay-1000"
-        >
-          Contacts
-        </a>
+        <div className="animate-fadeRight delay-1000 flex gap-8 items-center"> 
+          <LocaleSwitcher />
+          <a
+            href="#contact"
+            className="font-monBlack text-white bg-big rounded-full px-6 py-2 text-xs sm:text-sm md:text-base "
+          >
+            Contacts
+          </a>
+        </div>
       </div>
       <div className="absolute w-[1120px] h-full flex items-center xl:justify-between flex-col xl:flex-row justify-center gap-12">
         <div className="flex flex-col gap-8 top-52 xl:top-auto w-full xl:w-auto xl:items-start animate-fadeLeft delay-1000">

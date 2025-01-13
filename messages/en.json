@@ -1,0 +1,34 @@
+{
+  "Product1": {
+    "title1": "DISH",
+    "title2": "WASHING",
+    "subtitle": "LIQUID",
+    "size": "750ml",
+    "about": "Go to the about page",
+    "advantage1": "Removes Deep-seated grease",
+    "advantage2": "Skin-friendly and Hypoallergenic",
+    "advantage3": "Revitalizes and Shines",
+    "advantage4": "Plant-based ingredients"
+  },
+  "Product2": {
+    "title1": "LAUNDRY",
+    "title2": "DETERGENT",
+    "subtitle": "LIQUID",
+    "size": "750ml",
+    "about": "Go to the about page",
+    "advantage1": "4 times thick liquid than similar products",
+    "advantage2": "Remove deep stains",
+    "advantage3": "Fragrance scent",
+    "advantage4": "Recycable packaging"
+  },
+  "Product3": {
+    "title1": "WASHING",
+    "title2": "POWDER",
+    "size": "750ml",
+    "about": "Go to the about page",
+    "advantage1": "Fast dissolving technology /cold water/",
+    "advantage2": "Skin-friendly and Hypoallergenic",
+    "advantage3": "Makes the fabric softer than before",
+    "advantage4": "Easy rinse & Quick-Drying technology"
+  }
+}

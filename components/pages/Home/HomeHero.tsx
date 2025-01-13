@@ -16,7 +16,7 @@ export default function HomeHero() {
       {/* Added relative to contain absolute elements */}
       <div className="absolute top-0 left-0 w-full h-1/2 bg-white"></div>
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-back"></div>
-      <div className="absolute z-10 py-8 flex items-center justify-between xl:w-[1120px] w-full px-8 md:px-20 xl:px-0">
+      <div className="absolute z-10 py-8 flex items-center justify-between xl:w-[1120px] w-full px-8  xl:px-0">
         <Image
           src="/l4.png"
           width={320}
@@ -35,12 +35,12 @@ export default function HomeHero() {
           </a>
         </div>
       </div>
-      <div className="absolute w-[1120px] h-full flex items-center xl:justify-between flex-col xl:flex-row justify-center gap-12">
+      <div className="absolute xl:w-[1120px] h-full flex items-center xl:justify-between flex-col xl:flex-row justify-evenly gap-12 w-full pt-20">
         <div className="flex flex-col gap-8 top-52 xl:top-auto w-full xl:w-auto xl:items-start animate-fadeLeft delay-1000">
-          <h1 className="2xl:text-[100px] xl:text-[80px] lg:text-[60px] text-[40px] text-big font-monBlack leading-[1.2] text-center xl:text-left">
+          <h1 className="2xl:text-[100px] lg:text-[80px] md:text-[80px] text-[40px] text-big font-monBlack leading-[1.2] text-center xl:text-left">
             Household <br /> Cleaning <br /> Products
           </h1>
-          <p className="2xl:text-[20px] xl:text-[16px] lg:text-[12px] text-[10px] w-[440px] text-small font-monRegular hidden xl:block text-justify">
+          <p className="2xl:text-[20px] xl:text-[16px] lg:text-[12px]  text-[10px] w-[440px] text-small font-monRegular hidden lg:block text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -52,7 +52,7 @@ export default function HomeHero() {
           width={720}
           height={720}
           alt="Desktop Background"
-          className="animate-fadeRight delay-1000 w-[500px] xl:w-[720px]"
+          className="animate-fadeRight delay-1000 w-[500px]  md:w-full"
           priority // Ensures desktop background image loads faster
         />
       </div>

@@ -2,10 +2,10 @@ import React from "react";
 import Image from "@/node_modules/next/image";
 export default function ContactHero() {
   return (
-    <div className="flex flex-col justify-between bg-gray-100" id="contact">
+    <div className="flex flex-col justify-between bg-gray-100 gap-20 " id="contact">
       {/* Content Section */}
-      <div className="flex flex-col items-center justify-center py-40 px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col xl:flex-row  w-full max-w-6xl xl:justify-between gap-20 xl:w-[1120px]">
+      <div className="flex flex-col items-center justify-center px-8 xl:py-20">
+        <div className="flex flex-col xl:flex-row  xl:justify-between gap-20 xl:w-[1120px] ">
           {/* Follow Us */}
           <div className="text-center">
             <h2 className="text-2xl font-monBlack text-big">FOLLOW US</h2>
@@ -61,7 +61,7 @@ export default function ContactHero() {
           {/* Contact Us */}
           <div className="text-center">
             <h2 className="text-2xl font-monBlack text-big">CONTACT US</h2>
-            <div className="mt-4 text-left">
+            <div className="mt-4 text-center">
               <p>
                 <strong>Address:</strong> 43-52, 19 khoroo, Bayanzurkh district,
                 Ulaanbaatar, Mongolia

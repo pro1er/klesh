@@ -41,9 +41,9 @@ export default function CertificateHero() {
   return (
     <div
       ref={containerRef}
-      className="bg-back w-full xl:h-[50vh]  h-auto mb-20  opacity-0 transform translate-y-10 transition-all duration-1000 flex justify-center"
+      className="bg-back w-full xl:h-[50vh] px-8 h-auto mb-20  opacity-0 transform translate-y-10 transition-all duration-1000 flex justify-center md:px-8 "
     >
-      <div className="flex  h-full flex-col xl:flex-row items-center  gap-8 justify-between 2xl:gap-20 xl:gap-16 xl:w-[1120px]">
+      <div className="flex  h-full flex-col lg:flex lg:flex-row items-center  gap-8 justify-between 2xl:gap-20 xl:gap-16 xl:w-[1120px] md:grid md:grid-cols-2">
         <Certificate name="mnas logo.jpg" description={a("description")} />
         <Certificate name="icc logo.png" description={b("description")} />
         <Certificate

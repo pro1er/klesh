@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 export default function ThreeCanvas({ labelTexture, bottleColor }) {
@@ -32,6 +32,12 @@ export default function ThreeCanvas({ labelTexture, bottleColor }) {
 function Model({ labelTexture, bottleColor }) {
   const gltf = useGLTF('/3D/dish washing.gltf'); // Load the 3D model
   const modelRef = useRef();
+
+  useFrame(() => {
+    if (modelRef.current) {
+      modelRef.current.rotation.y += 0.005; // Rotate around the Y-axis
+    }
+  });
 
   useEffect(() => {
     if (modelRef.current) {

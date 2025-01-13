@@ -30,5 +30,21 @@
     "advantage2": "Skin-friendly and Hypoallergenic",
     "advantage3": "Makes the fabric softer than before",
     "advantage4": "Easy rinse & Quick-Drying technology"
+  },
+  "Certificate1": {
+    "title": "MNAS",
+    "description":"All of our products have been tested in laboratories affiliated with the Mongolian Professional Supervision Authority"
+  },
+  "Certificate2": {
+    "title": "ICC",
+    "description":"Our certificate of origin is certified by the World Chamber of Commerce"
+  },
+  "Certificate3": {
+    "title": "ILAC MRA",
+    "description":"Our certificate of origin is certified by the International Laboratory Accreditation Cooperation Mutual Recognition Agreement"
+  },
+  "Certificate4": {
+    "title": "WASHING",
+    "description":"asd"
   }
 }

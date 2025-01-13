@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame} from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 export default function ThreeCanvas() {
@@ -47,6 +47,11 @@ function Model() {
   const gltf = useGLTF('/3D/washing powder.gltf'); // Replace with your model path
   const modelRef = useRef();
 
+  useFrame(() => {
+    if (modelRef.current) {
+      modelRef.current.rotation.y += 0.005; // Rotate around the Y-axis
+    }
+  });
   // Center the model in the scene
   useEffect(() => {
     if (modelRef.current) {

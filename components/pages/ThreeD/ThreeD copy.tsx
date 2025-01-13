@@ -49,7 +49,7 @@ const ThreeD2: React.FC = () => {
 
   return (
     <div className="bg-back min-h-screen flex items-center justify-center w-full xl:px-44 px-8">
-    <div className="flex flex-col lg:flex-row items-center xl:gap-40 max-w-7xl mx-auto 2xl:gap-60 ">
+    <div className="flex flex-col xl:flex-row items-center xl:gap-40 max-w-7xl mx-auto 2xl:gap-60 ">
       {/* Left Section - Product Image */}
       <div className="xl:h-screen 2xl:w-[540px] xl:w-[400px] h-[600px] relative md:w-full md:h-screen">
           <ThreeCanvas labelTexture={labelTexture} />
@@ -88,7 +88,7 @@ const ThreeD2: React.FC = () => {
               <span className="2xl:text-[80px] md:text-[68px] text-[40px] leading-none font-monBlack text-big">
               {t('title2')}
               </span>
-              <span className="2xl:text-[40px] md:text-[32px] text-[28px] text-mid leading-none font-monBlack block">
+              <span className="md:text-[40px]  text-[28px] text-mid leading-none font-monBlack block">
               {t('subtitle')}
               </span>
             </h1>

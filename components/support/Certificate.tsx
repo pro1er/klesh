@@ -19,7 +19,7 @@ export default function Certificate({ name,description}: CertificateProps) {
         />
       </div>
       {/* Description */}
-      <p className="text-[12px] xl:text-[14px] font-monRegular">
+      <p className="text-[12px] md:text-[14px] font-monRegular">
        {description}
       </p>
     </div>

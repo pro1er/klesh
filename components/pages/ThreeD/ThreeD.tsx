@@ -51,7 +51,7 @@ const ThreeD: React.FC = () => {
 
   return (
     <div className="bg-back min-h-screen flex items-center justify-center w-full xl:px-44 px-8">
-      <div className="flex flex-col lg:flex-row items-center xl:gap-40 max-w-7xl mx-auto 2xl:gap-60 ">
+      <div className="flex flex-col xl:flex-row items-center xl:gap-40 max-w-7xl mx-auto 2xl:gap-60 ">
         {/* Left Section - Product Image */}
         <div className="xl:h-screen 2xl:w-[540px] xl:w-[400px] h-[600px] relative md:w-full md:h-screen">
           <ThreeCanvas labelTexture={labelTexture} bottleColor={bottleColor} />
@@ -95,7 +95,7 @@ const ThreeD: React.FC = () => {
               {t("size")}
             </p>
           </div>
-          <p className="2xl:text-[20px] md:text-[16px] mt-6 text-small leading-tight text-justify">
+          <p className="md:text-[20px]  mt-6 text-small leading-tight text-justify">
             Манай хамгийн сүүлийн үеийн аяга таваг угаагч шингэнийг Герман
             технологийн хүчийг мэдрээрэй. Таны гарт ээлтэй зөөлөн байхын
             зэрэгцээ хамгийн хатуу тослог, бохирдлыг арилгах хамгийн сүүлийн

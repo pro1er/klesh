@@ -9,22 +9,18 @@ export default function ThreeCanvas() {
       style={{ width: '100%', height: '100%' }}
     >
       {/* Global ambient light for overall brightness */}
-      <ambientLight intensity={1.5} />
-
+      <ambientLight intensity={0.7} /> {/* Brighter ambient light */}
       {/* Hemisphere light for a natural sky-like feel */}
-      <hemisphereLight skyColor="#ffffff" groundColor="#aaaaaa" intensity={1.2} />
-
-      {/* Strong directional light for main illumination */}
       <directionalLight
-        position={[5, 10, 5]}
-        intensity={2.5}
+        position={[0, 5, 5]}
+        intensity={3}
         castShadow
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
       />
-
       {/* Secondary directional light for fill */}
-      <directionalLight position={[-5, -5, 5]} intensity={1.5} />
+      <directionalLight position={[5, 5, -5]} intensity={3} />
+      <directionalLight position={[-5, -5, 5]} intensity={3} />
 
       {/* Spotlight for defined shadows */}
       <spotLight
@@ -34,7 +30,6 @@ export default function ThreeCanvas() {
         penumbra={0.5}
         castShadow
       />
-
       {/* Model and orbit controls */}
       <Model />
       <OrbitControls

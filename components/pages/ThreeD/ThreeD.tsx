@@ -8,7 +8,6 @@ const ThreeD: React.FC = () => {
   const [labelTexture, setLabelTexture] = useState<Texture | null>(null);
   const [activeTexture, setActiveTexture] = useState<string>("yellow");
   const [bottleColor] = useState<string>("#FFC107");
-  const [is3DEnabled, setIs3DEnabled] = useState<boolean>(false);
 
   // Load textures in useEffect to ensure it only runs on the client
   useEffect(() => {
@@ -53,10 +52,6 @@ const ThreeD: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center xl:gap-40 max-w-7xl mx-auto 2xl:gap-60">
         {/* Left Section - Product Image */}
         <div className="xl:h-screen 2xl:w-[540px] xl:w-[400px] h-[600px] relative">
-          {/* Overlay div for disabling interaction */}
-          {!is3DEnabled && (
-            <div className="absolute inset-0   z-10"></div>
-          )}
 
           <ThreeCanvas labelTexture={labelTexture} bottleColor={bottleColor} />
 
@@ -80,14 +75,6 @@ const ThreeD: React.FC = () => {
           </div>
 
           {/* 3D Toggle Button */}
-          <button
-            className={`z-20 absolute top-4 right-4 px-4 py-2 rounded-full text-white font-bold ${
-              is3DEnabled ? "bg-blue-500" : "bg-red-500"
-            }`}
-            onClick={() => setIs3DEnabled(!is3DEnabled)}
-          >
-            {is3DEnabled ? "3D" : "3D ✖"}
-          </button>
         </div>
 
         {/* Right Section - Content */}

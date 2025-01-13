@@ -39,12 +39,16 @@ const ThreeD2 = () => {
           {/* Features Section */}
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
           <div className="flex flex-col items-center gap-2">
-            <div className="text-blue-900 text-2xl w-14 h-14 flex justify-center items-center" >
+          <div className="text-blue-900 text-2xl w-10 h-10 flex justify-center items-center" >
                 <Image
                   src="/icon/washing powder/1. washing powder.svg"
                   alt="Dish Washing Icon"
-                  width={48} // Replace with your desired width
-                  height={48} // Replace with your desired height
+                  width={32} // Replace with your desired width
+                  height={32} // Replace with your desired height
+                  style={{
+                    filter:
+                    "brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(4938%) hue-rotate(1deg) brightness(106%) contrast(101%)",
+                  }}
                 />
               </div>
               <p className="text-[16px] text-small text-center">
@@ -52,12 +56,16 @@ const ThreeD2 = () => {
               </p>
             </div>
             <div className="flex flex-col items-center gap-2">
-            <div className="text-blue-900 text-2xl w-14 h-14 flex justify-center items-center" >
+            <div className="text-blue-900 text-2xl w-10 h-10 flex justify-center items-center" >
                 <Image
                   src="/icon/washing powder/2. washing powder.svg"
                   alt="Dish Washing Icon"
-                  width={48} // Replace with your desired width
-                  height={48} // Replace with your desired height
+                  width={32} // Replace with your desired width
+                  height={32} // Replace with your desired height
+                  style={{
+                    filter:
+                    "brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(4938%) hue-rotate(1deg) brightness(106%) contrast(101%)",
+                  }}
                 />
               </div>
               <p className="text-[16px] text-small text-center">
@@ -65,12 +73,16 @@ const ThreeD2 = () => {
               </p>
             </div>
             <div className="flex flex-col items-center gap-2">
-            <div className="text-blue-900 text-2xl w-14 h-14 flex justify-center items-center" >
+            <div className="text-blue-900 text-2xl w-10 h-10 flex justify-center items-center" >
                 <Image
                   src="/icon/washing powder/3. washing powder.svg"
                   alt="Dish Washing Icon"
-                  width={48} // Replace with your desired width
-                  height={48} // Replace with your desired height
+                  width={32} // Replace with your desired width
+                  height={32} // Replace with your desired height
+                  style={{
+                    filter:
+                    "brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(4938%) hue-rotate(1deg) brightness(106%) contrast(101%)",
+                  }}
                 />
               </div>
               <p className="text-[16px] text-small text-center">
@@ -78,12 +90,16 @@ const ThreeD2 = () => {
               </p>
             </div>
             <div className="flex flex-col items-center gap-2">
-            <div className="text-blue-900 text-2xl w-14 h-14 flex justify-center items-center" >
+            <div className="text-blue-900 text-2xl w-10 h-10 flex justify-center items-center" >
                 <Image
                   src="/icon/washing powder/4. washing powder.svg"
                   alt="Dish Washing Icon"
-                  width={48} // Replace with your desired width
-                  height={48} // Replace with your desired height
+                  width={32} // Replace with your desired width
+                  height={32} // Replace with your desired height
+                  style={{
+                    filter:
+                    "brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(4938%) hue-rotate(1deg) brightness(106%) contrast(101%)",
+                  }}
                 />
               </div>
               <p className="text-[16px] text-small text-center">
